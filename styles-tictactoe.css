@@ -1,0 +1,29 @@
+.tic-tac-toe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);/* repeating the colum template 3 times*/
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 300px;
+}
+.tic-tac-toe-cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;/* to indicate we can click on something*/
+    border: 3px solid #000;
+}
+
+body {
+    background-color:rgb(88, 189, 228);
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-decoration:underline;
+    text-align: center;
+    filter: drop-shadow 8px 8px 5px rgb(0, 10, 14);
+} 
