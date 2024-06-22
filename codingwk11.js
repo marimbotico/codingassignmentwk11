@@ -60,7 +60,7 @@ function checkWinner() {// this method checks if there's a winner or a draw
     let roundWon = false;
 
     for (let i = 0; i < winningCombinations.length; i++) {
-        const condition = winningCombinations[i];
+        const condition = winningCombinations[i];//eg. [0,1,2]
         const cellA = cellInput[condition[0]];
         const cellB = cellInput[condition[1]];
         const cellC = cellInput[condition[2]];// this will iterate over all the possible winning combinations
@@ -70,7 +70,7 @@ function checkWinner() {// this method checks if there's a winner or a draw
         }
         if (cellA == cellB && cellB == cellC) {// if three cells in a row are the same we have a winner!
             roundWon = true;
-            break;
+            break;// exists the loop
         }
     }
     if (roundWon) {// if roundWon is true then the game is over
@@ -84,7 +84,7 @@ function checkWinner() {// this method checks if there's a winner or a draw
     }
 }
 
-function showAlert(message) {// displays an alert within the bootstrap button in the HTML
+function showAlert(message) {// displays an alert within the bootstrap button in the HTML. The message parameter allows me to display different messages without changing the function.
     alertContainer.html(`
         <div class="alert alert-success" role="alert">
             ${message}
